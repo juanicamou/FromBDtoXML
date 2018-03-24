@@ -8,10 +8,10 @@ import os
 # Conexión a BD
 conn = pyodbc.connect(
 r'DRIVER={ODBC Driver 13 for SQL Server};'
-r'SERVER=10.1.40.154;'
-r'DATABASE=RLP-Nacimientos-Final;'
-r'UID=juan;'
-r'PWD=123456')
+r'SERVER=;'
+r'DATABASE=;'
+r'UID=;'
+r'PWD=')
 cursor = conn.cursor()
 cursor.execute(u"SELECT [L].[Tomo], [L].[Año], [L].[sala], [D].[ID_Deleg], [A].[Libro], [A].[idGenero], [A].[DNI], [A].[NombreInfante], [A].[ApellidoInfante], [A].[FechaNacimiento], [A].[Acta] ,[A].[PAGE_IMAGES]"
               u"FROM [RLP-Nacimientos-Final].[dbo].[N_Redip] [A]"
